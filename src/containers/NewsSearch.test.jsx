@@ -1,9 +1,9 @@
+import dotenv from 'dotenv';
+dotenv.config();
 import React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import NewsSearch from './NewsSearch';
-import dotenv from 'dotenv';
-dotenv.config();
 
 describe('test news api endpoint', () => {
   it('returns a list of news stories', async () => {
