@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test news api endpoint returns a list of news stories 1`] = `
+Array [
+  <li>
+    TITLE: 
+    Trail Blazers pound Pacers, snap five-game skid - Reuters
+    BY: 
+    
+    DESCRIPTION: 
+    Anfernee Simons' 27 points on 9-of-10 shooting from 3-point range led a dominant effort by the Portland Trail Blazers during a 133-112 win over the Indiana Pacers on Tuesday night in Indianapolis.
+  </li>,
+]
+`;
