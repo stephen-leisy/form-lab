@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ArticleList from '../components/news/ArticleList';
-import { getAllNews, searchNews } from '../services/newsApi';
+import { searchNews } from '../services/newsApi';
 import Controls from '../components/news/Controls';
 
 export default class NewsSearch extends Component {
@@ -11,7 +11,7 @@ export default class NewsSearch extends Component {
   };
 
   async componentDidMount() {
-    const articleList = await getAllNews();
+    const articleList = await searchNews();
     this.setState({ articleList, loading: false });
   }
 
