@@ -14,17 +14,15 @@ describe('test news api endpoint', () => {
     expect(ul).not.toBeEmptyDOMElement();
 
     const input = await screen.findByLabelText('Search For News');
-    userEvent.type(input, 'Portland Trail Blazers pound pacers skid');
+    userEvent.type(input, 'hello');
 
     const button = await screen.findByRole('button', { name: 'find-news' });
     userEvent.click(button);
 
     return waitFor(() => {
-      const news = screen.getAllByText('Portland Trail Blazers', {
-        exact: false,
-      });
-      expect(news).toHaveLength(1);
-      expect(news).toMatchSnapshot();
+      const news = screen.getAllByTestId('article-li');
+      expect(news).toHaveLength(20);
+      // expect(news).toMatchSnapshot();
     });
   });
 });
